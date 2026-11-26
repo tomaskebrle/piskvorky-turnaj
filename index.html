@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Turnajová stránka - pIšQworky</title>
+    <meta property="og:image" content="assets/images/og-turnajova-stranka.png"/>
+    <meta property="og:image:width" content="1200"/>
+    <meta property="og:image:height" content="630"/>
+    <link href="assets/css/dosis.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/bootstrap-select.min.css">
+    <link rel="stylesheet" href="assets/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="assets/css/main.css"/>
+    <script src="assets/js/jquery-3.3.1.min.js"></script>
+    <script src="assets/js/popper.min.js" defer integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="assets/js/bootstrap.min.js" defer integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+    <script src="assets/js/validator.min.js" defer></script>
+    <script src="assets/js/bootstrap-select.min.js" defer></script>
+    <script src="assets/js/ajax-bootstrap-select.min.js" defer></script>
+    <script src="assets/js/main.js" defer></script>
+    <link  href="assets/css/fotorama.css" rel="stylesheet">
+    <script src="assets/js/fotorama.js" defer></script>
+    <link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.png" />
+    <meta name="description" content="Největší studentská soutěž v piškvorkách v Čechách i na Slovensku!">
+<meta property="og:title" content="PIŠQWORKY – Mistrovství v piškvorkách">
+<meta property="og:description" content="Největší studentská soutěž v piškvorkách v Čechách i na Slovensku!">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="PIŠQWORKY – Mistrovství v piškvorkách">
+<meta name="twitter:description" content="Největší studentská soutěž v piškvorkách v Čechách i na Slovensku!">
+
+
+<style>
+html {scroll-behavior: smooth;}
+
+.news .news-box:hover {cursor:auto;}
+
+#content-wrap a {font-weight: bold;}
+#content-wrap footer, #content-wrap footer a {font-weight: 500;}
+
+.partner-group .partner-group-title, .partner-group .partner-title {font-size: 1.5rem;}
+
+.partner-group .row {justify-content:center;}
+
+.partner-group {margin-top: 100px;padding: 20px 20px 20px 20px; --b: 1.5px;--c: #c0c0c0;--w: 50px;border: var(--b) solid #0000;--_g: #0000 90deg, var(--c) 0;--_p: var(--w) var(--w) border-box no-repeat;background: conic-gradient(from 90deg at top var(--b) left var(--b), var(--_g)) 0 0 / var(--_p), conic-gradient(from 180deg at top var(--b) right var(--b), var(--_g)) 100% 0 / var(--_p), conic-gradient(from 0deg at bottom var(--b) left var(--b), var(--_g)) 0 100% / var(--_p), conic-gradient(from -90deg at bottom var(--b) right var(--b), var(--_g)) 100% 100% / var(--_p);}
+.partner-group:first-child {background:none;}
+
+.partner-box .partner-content .partner-text {
+max-width: 90%;
+overflow: visible;
+text-align: left;
+}
+.partner-box .partner-content {
+max-width: 100%;
+}
+
+@media (min-width: 768px) {
+.partner-box .partner-content .partner-text, .partner-box {
+height: auto;
+min-height: 250px;
+}
+.partner-box .photo img {
+width:250px;
+}
+}
+
+@media (max-width: 500px) {
+.main-content {
+min-height: 180vw;
+}
+.main-content .after-background {
+padding-top: 120px;
+}
+.main-content .after-background .title {
+font-size: 11vw;
+}
+.main-content .main-paragraph {
+font-size: 6vw;
+}
+.main-content .btns .btn-main-action {
+font-size: 5vw;
+}
+}
+
+@media (max-width: 400px) {
+.contact-box .name, .contact-box .email, .contact-box .phone {
+font-size: 4.3vw;
+}
+.contact-box .title {
+font-size: 4.5vw;
+}
+}
+@media (min-width: 330px) {
+ .contact-box>* {
+padding-left: 160px;
+}
+.contact-box .photo {
+display: block;
+}
+}
+
+.about img {
+max-width: 100%;
+}
+@media(max-width: 576px) {
+.about-odd {
+flex-direction: column-reverse;
+}
+.about img {
+width: 80%;
+}
+}
+
+.table td, .table th {
+font-weight: bold !important;
+font-size: 1.2rem !important;
+}
+
+
+.carousel-inner .carousel-item .image-box .photo .img img {
+    height: 100%;
+}
+
+.carousel-inner .carousel-item .image-box .photo {
+    margin: 0;
+}
+
+.carousel-inner .carousel-item .image-box {
+    padding: 0;
+}
+
+.carousel-inner .carousel-item .image-box .box-content {
+    position: relative;
+    background: rgba(var(--primary-color-dark-rgb), 100%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btn.btn-xo:hover {
+background-color: var(--primary-color-dark) !important;
+}
+
+.main-content .btns .btn-main-action:hover, nav.navbar.navbar-dark .btn-nav:hover {
+background-color: #e8e8e8;
+}
+</style>
+    <style>body{font-family:'Dosis', sans-serif;}:root{--primary-color:#2b4474;--btn-color:#243961;--primary-color-rgb:43,68,116;--primary-color-dark:#243961;--primary-color-dark-rgb:36,57,97;--secondary-color:#e11734;--secondary-color-rgb:225,23,52;--secondary-color-dark:#b31229;--secondary-color-dark-rgb:179,18,41;--li-dark-even:url(assets/images/bullets/li-dark-even.png);--li-dark-odd:url(assets/images/bullets/li-dark-odd.png);--li-even:url(assets/images/bullets/li-even.png);--li-odd:url(assets/images/bullets/li-odd.png);}</style>
+    <base>
+</head>
+<body>
+<div id="page-container">
+    <div id="content-wrap">
+<!--Navbar-->
+<nav class="navbar navbar-expand-lg fixed-top navbar-dark">
+
+    <div class="container">
+
+        <a class="navbar-brand" href="https://pisqworky.cz/">
+            <img src="assets/images/logo.png" alt="">
+        </a>
+
+        <!-- Collapse button -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
+                aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Collapsible content -->
+        <div class="collapse navbar-collapse" id="basicExampleNav">
+
+            <!-- Links -->
+            <ul class="navbar-nav ml-auto">
+                                                    <li class="nav-item">
+                        <a class="nav-link" href="https://pisqworky.cz/o-soutezi">O soutěži</a>
+                    </li>
+                                    <li class="nav-item">
+                        <a class="nav-link" href="https://pisqworky.cz/kontakty">Kontakty</a>
+                    </li>
+                                    <li class="nav-item">
+                        <a class="nav-link" href="https://platforma.pisqworky.cz/">Platforma</a>
+                    </li>
+                                    <li class="nav-item">
+                        <a class="nav-link" href="https://pisqworky.cz/clanky">Články</a>
+                    </li>
+                                    <li class="nav-item">
+                        <a class="btn btn-nav" href="https://pisqworky.cz/turnaje">Turnaje</a>
+                    </li>
+                                    <li class="nav-item">
+                        <a class="nav-link" href="https://pisqworky.cz/sk">SK</a>
+                    </li>
+                            </ul>
+            <!-- Links -->
+        </div>
+        <!-- Collapsible content -->
+
+    </div>
+
+</nav>
+<div class="content">
+<div class="container"><!-- Flex layout for left, center, right -->
+<div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 20px; flex-wrap: wrap;"><!-- Left Box: Swap --> <!-- Left Box: Swap + SCG Logo -->
+<div style="display: flex; flex-direction: column; gap: 20px; flex: 1; min-width: 200px;">
+<div class="box box-primary-dark" style="min-width: 200px; flex: 1;">
+<h2>Swap</h2>
+<p><strong>Swap 1:</strong></p>
+<p><span style="font-size: 1rem;">1. Prvn&iacute; hr&aacute;č um&iacute;st&iacute; do pole <strong>2&times; stejn&yacute; symbol</strong> a <strong>1&times; jin&yacute;</strong>.</span></p>
+<p><span style="font-size: 1rem;">2. Druh&yacute; hr&aacute;č si <strong>vybere</strong>, za kter&yacute; symbol chce hr&aacute;t.</span></p>
+<p><span style="font-size: 1rem;">3. Pokračuje ten, kdo m&aacute; <strong>m&eacute;ně symbolů</strong> na hrac&iacute; plo&scaron;e.</span></p>
+<p><strong>Swap 2:</strong></p>
+<p><span style="font-size: 1rem;">1. Prvn&iacute; hr&aacute;č um&iacute;st&iacute; do pole <strong>2&times; stejn&yacute; symbol</strong> a <strong>1&times; jin&yacute;</strong>.</span></p>
+<p><span style="font-size: 1rem;">2. Druh&yacute; hr&aacute;č si buď <strong>vybere symbol</strong>, nebo <strong>přid&aacute; 1&times; X a 1&times; O</strong>.</span></p>
+<p><span style="font-size: 1rem;">3. Prvn&iacute; hr&aacute;č si <strong>vybere symbol</strong> a zač&iacute;n&aacute; ten, kdo m&aacute; <strong>m&eacute;ně symbolů</strong>.</span></p>
+</div>
+<!-- SCG Logo -->
+<div style="text-align: center;"><a href="https://scg.cz"> <img style="width: 250px; height: 120px;" src="assets/images/scg-logo.jpeg" alt="SCG logo" /> </a></div>
+</div>
+<!-- Center: Original Content -->
+<div style="flex: 2; min-width: 300px;"><!-- CLOCK SECTION -->
+<section style="text-align: center; margin-bottom: 25px;">
+<h2 style="color: #2b4474; font-size: 2.8em; margin-bottom: 0.2em;">Aktu&aacute;ln&iacute; čas</h2>
+<div style="display: inline-block; background: #fff; padding: 25px; box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); border: 2px solid #243961;"><!--
+<h4 style="margin: 8px 0; color: #243961; font-size: 1.2em;"><a style="text-decoration: none; color: inherit;" href="https://www.timeanddate.com/worldclock/czech-republic/prague"> Praha, Česko </a></h4>
+--> <div id="prague-clock" role="timer" aria-live="polite" aria-label="Aktuální čas v Praze">--:--:--</div>
+<style>
+#prague-clock {
+  width: 220px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  white-space: nowrap;
+  font-family: Tahoma, sans-serif;
+  font-size: 48px;
+  color: #243961;
+  font-weight: bold;
+  line-height: 1;
+  text-decoration: none;
+}
+</style>
+<script>
+(function () {
+  var el = document.getElementById("prague-clock");
+  var fmt = new Intl.DateTimeFormat("en-GB", {
+    timeZone: "Europe/Prague",
+    hour: "2-digit",
+    minute: "2-digit",
+    second: "2-digit",
+    hour12: false
+  });
+  function pad(v) { return v.length === 1 ? "0" + v : v; }
+  function tick() {
+    var parts = fmt.formatToParts(new Date());
+    var map = {};
+    for (var i = 0; i < parts.length; i++) map[parts[i].type] = parts[i].value;
+    el.textContent = pad(map.hour) + ":" + pad(map.minute) + ":" + pad(map.second);
+  }
+  tick();
+  setInterval(tick, 250);
+})();
+</script></div>
+</section>
+<!-- QR CODES SECTION -->
+<section style="display: flex; justify-content: center; flex-wrap: wrap; gap: 50px; row-gap: 5px;">
+<div style="text-align: center;"><a href="https://discord.gg/wFdVsGb6e5"> <img style="width: 200px; height: 200px; border: 3px solid #e11734;" src="assets/images/qr-discord.jpeg" alt="Discord QR" /></a>
+<p style="margin-top: 10px; font-size: 1.1em; color: #2b4474;"><strong>Discord server</strong></p>
+</div>
+<div style="text-align: center;"><a href="https://pisqworky.cz/turnaje"> <img style="width: 200px; height: 200px; border: 3px solid #e11734;" src="assets/images/qr-prubeh.jpeg" alt="Runtime QR" /></a>
+<p style="margin-top: 10px; font-size: 1.1em; color: #2b4474;"><strong>Průběh turnajů</strong></p>
+</div>
+<div style="text-align: center;"><a href="https://linktr.ee/pisqworky"> <img style="width: 200px; height: 200px; border: 3px solid #e11734;" src="assets/images/qr-linktree.jpeg" alt="Linktree QR" /></a>
+<p style="margin-top: 10px; font-size: 1.1em; color: #2b4474;"><strong>Linktree</strong></p>
+</div>
+</section>
+</div>
+<!-- Right Box: Ohodnocení hry -->
+<div style="display: flex; flex-direction: column; justify-content: center; align-items: center; margin: 0 auto;">
+<div class="box box-primary-dark" style="min-width: 200px; flex: 1; margin-bottom: 25px;">
+<h2>Hodnocen&iacute; hry</h2>
+<p><strong>V&yacute;hra: </strong>2 body</p>
+<p><strong>Rem&iacute;za: </strong>1 bod</p>
+<p><strong>Prohra: </strong>0 bodů</p>
+</div>
+<!-- PARTNER LOGOS SECTION -->
+<section style="text-align: center; margin-bottom: 25px;">
+<h3 style="font-size: 2em; color: #e11734; margin-bottom: 20px;"><strong>Na&scaron;i partneři</strong></h3>
+<div style="display: flex; flex-direction: column; justify-content: center; align-items: center; flex-wrap: wrap;">
+<div style="width: 140px; text-align: center;"><img style="width: 140px; height: 90px; object-fit: cover; object-position: center; border: 1px solid #ccc;" src="assets/images/partner-o2.jpeg" alt="O2" />
+<p style="margin-top: 8px; color: #2b4474;">O2</p>
+</div>
+<div style="width: 140px; text-align: center;"><img style="width: 140px; height: 90px; object-fit: cover; border: 1px solid #ccc;" src="assets/images/partner-mindok.jpeg" alt="Mindok" />
+<p style="margin-top: 8px; color: #2b4474;">Mindok</p>
+</div>
+<div style="width: 140px; text-align: center;"><img style="width: 140px; height: 90px; object-fit: cover; border: 1px solid #ccc;" src="assets/images/partner-ceps.jpeg" alt="ČEPS" />
+<p style="margin-top: 8px; color: #2b4474;">ČEPS</p>
+</div>
+<div style="width: 140px; text-align: center;"><img style="width: 140px; height: 90px; object-fit: cover; border: 1px solid #ccc;" src="assets/images/partner-education.jpeg" alt="Education.cz" />
+<p style="margin-top: 8px; color: #2b4474;">Education.cz</p>
+</div>
+</div>
+</section>
+</div>
+</div>
+<!-- END of flex row --></div>
+</div>
+</div>
+<footer class="page-footer font-small">
+    <div class="container text-center text-md-left py-4">
+        <div class="row align-items-center">
+            <div class="col-md-6">
+                <h5 class="text-uppercase">students can grow, z.s.</h5>
+                <p class="mb-0">Chceš se k nám přidat nebo se dozvědět víc o soutěži?<br/>
+Napiš nám na <a href="mailto:info@scg.cz">info@scg.cz.</a></p>
+            </div>
+            <hr class="clearfix w-100 d-md-none pb-3">
+            <div class="col-md-3 mb-md-0 mb-3 socials">
+                <a title="https://www.facebook.com/pisqworky/" href="https://www.facebook.com/pisqworky/"><i class="fab fa-fh fa-facebook-f"></i></a>
+                <a title="https://www.instagram.com/pisqworky/" href="https://www.instagram.com/pisqworky/"><i class="fab fa-fh fa-instagram"></i></a>
+                <a title="https://youtube.com/@studentscangrow" href="https://youtube.com/@studentscangrow"><i class="fab fa-fh fa-youtube"></i></a>
+            </div>
+            <div class="col-md-3">
+                <ul class="list-unstyled">
+                                                                <li class="nav-item">
+                            <a class="" href="https://pisqworky.cz/turnaj-podstranka">Turnajová podstránka</a>
+                        </li>
+                                            <li class="nav-item">
+                            <a class="" href="https://pisqworky.cz/faq">FAQ</a>
+                        </li>
+                                            <li class="nav-item">
+                            <a class="" href="https://pisqworky.cz/media">Pro média</a>
+                        </li>
+                                            <li class="nav-item">
+                            <a class="" href="https://pisqworky.cz/materialy">Materiály ke stažení</a>
+                        </li>
+                                            <li class="nav-item">
+                            <a class="" href="https://pisqworky.cz/podminky">Podmínky zpracování osobních údajů</a>
+                        </li>
+                                    </ul>
+            </div>
+        </div>
+    </div>
+    <div class="footer-copyright text-center py-3">© 2026 students can grow</div>
+</footer>
+
+</div>
+</body>
+</html>
